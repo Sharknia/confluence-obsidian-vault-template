@@ -1,0 +1,25 @@
+.DS_Store
+.env
+
+# Obsidian 개인 상태와 캐시는 사용자마다 달라서 배포 저장소에 포함하지 않는다.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/plugins/confluence-obsidian-sync/data.json
+
+# Confluence 산출물과 Pull 로그는 로컬 작업 결과로만 유지한다.
+confluence/*
+!confluence/.gitkeep
+logs/*
+!logs/.gitkeep
+
+# graphify 산출물은 로컬에서 재생성 가능한 분석 결과다.
+graphify-out/*
+!graphify-out/.gitkeep
+
+# 인증 정보와 사용자별 프로젝트 상태는 Git에 올리지 않는다.
+.confluence-sync/config.json
+.confluence-sync/projects.json
+.confluence-sync/credentials.json
+.confluence-sync/trash/*
+!.confluence-sync/trash/.gitkeep

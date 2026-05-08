@@ -1,0 +1,5 @@
+{
+  "defaultProjectFolder": "confluence",
+  "safeDeleteFolder": ".confluence-sync/trash",
+  "graphifyOutputFolder": "graphify-out"
+}
