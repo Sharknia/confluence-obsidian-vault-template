@@ -2,7 +2,7 @@
 
 Confluence Obsidian Sync 플러그인이 포함된 Obsidian vault template입니다.
 
-Template version: `0.0.3`
+Template version: `0.0.4`
 
 ## 시작
 
@@ -11,7 +11,7 @@ Template version: `0.0.3`
 3. `Settings > Community plugins`에서 Restricted mode를 끄고 `Confluence Obsidian Sync`를 활성화합니다.
 4. 플러그인 설정에서 Confluence base URL, Atlassian account email, API token을 입력합니다.
 5. 왼쪽 리본 아이콘 또는 명령 팔레트의 `Open Sync Panel`을 실행합니다.
-6. Root content URL 기본값 `https://selta.atlassian.net/wiki/spaces/IS/folder/23167000`을 확인하고 프로젝트를 생성한 뒤 `Pull Tree`를 실행합니다.
+6. Root content URL 기본값 `https://selta.atlassian.net/wiki/spaces/IS/folder/23167000`을 확인하고 `Pull Tree`를 실행합니다. 필요한 프로젝트는 Pull 실행 중 자동으로 생성됩니다.
 
 ## 플러그인 업데이트와 터미널
 
