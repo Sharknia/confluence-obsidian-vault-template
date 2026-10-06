@@ -2,6 +2,7 @@
   "name": "confluence-obsidian-vault-template",
   "version": "0.0.4",
   "pluginId": "confluence-obsidian-sync",
-  "pluginVersion": "0.1.63",
-  "defaultRootContentUrl": "https://selta.atlassian.net/wiki/spaces/IS/folder/23167000"
+  "pluginVersion": "0.1.64",
+  "defaultRootContentUrl": "https://selta.atlassian.net/wiki/spaces/IS/folder/23167000",
+  "cliVersion": "0.1.64"
 }
