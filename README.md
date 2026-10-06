@@ -4,6 +4,8 @@ Confluence Obsidian Sync 플러그인이 포함된 Obsidian vault template입니
 
 Template version: `0.0.4`
 
+Plugin version: `0.1.63`
+
 ## 시작
 
 1. 이 저장소를 ZIP으로 내려받거나 clone합니다.
@@ -38,3 +40,20 @@ Sync Panel의 `플러그인 업데이트`는 GitHub 최신 Release에서 플러�
 - `graphify-out/`: 선택 설치한 graphify CLI 분석 결과
 
 자세한 첫 실행 순서는 `처음 시작하기.md`를 확인하세요.
+
+
+## Obsidian 없이 동기화하기
+
+Node.js 22 이상에서 [플러그인 코드 저장소](https://github.com/Sharknia/confluence-obsidian-sync)의 CLI를 빌드하면 Obsidian을 실행하지 않고 이 vault를 사용할 수 있습니다. CLI 실행 파일은 template에 동봉하지 않습니다.
+
+코드 저장소에서 `pnpm install --frozen-lockfile`과 `pnpm run build:cli`를 실행한 뒤 다음 명령을 사용합니다. `--vault`에는 이 template을 내려받은 실제 폴더의 절대 경로를 지정합니다.
+
+```bash
+node dist/cli.mjs check --vault '/절대/경로/vault'
+node dist/cli.mjs pull-tree --vault '/절대/경로/vault'
+node dist/cli.mjs push-page --vault '/절대/경로/vault' --file 'confluence/프로젝트/문서.md' --yes
+```
+
+기존 플러그인 설정의 인증·현재 프로젝트를 읽으며 `data.json`을 수정하지 않습니다. 새 폴더에서 시작할 때는 `CONFLUENCE_BASE_URL`, `CONFLUENCE_USER_EMAIL`, `CONFLUENCE_API_TOKEN` 환경변수와 `init --root <URL>`을 사용합니다. JSON 결과·확인 정책·부분 실패 복구는 코드 저장소의 README를 확인하세요.
+
+업데이트된 플러그인과 CLI는 `.confluence-sync/operation.lock`을 공유합니다. 동기화 중 같은 파일을 다른 에디터에서 동시에 편집하지 마세요.
