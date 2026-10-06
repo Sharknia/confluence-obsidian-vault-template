@@ -23,3 +23,6 @@ graphify-out/*
 .confluence-sync/credentials.json
 .confluence-sync/trash/*
 !.confluence-sync/trash/.gitkeep
+
+# CLI와 플러그인의 공동 동기화 잠금
+.confluence-sync/operation.lock
